@@ -1,0 +1,153 @@
+<!Doctype html>
+<html>
+ <head>
+  <title>Tsogang Sechaba Community Project</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0, user-scalable=no">
+  
+		<!-- Icon links -->
+        <link href="title-logo.jpeg" rel="icon"><!-- Title Icon -->
+ </head>
+ 
+ <style>
+   html, body{ 
+   font-family: Arial, sans-serif;
+   background-color: BLACK;
+   color: black;
+   padding: 0;
+   margin: 0;
+   top: 0;
+   left: 0;
+  }
+  .header{
+   background-color: rgba(0, 0, 0, 0.6);
+   position: relative;
+   height: 120px;
+   overflow: hidden;
+   line-height: 100px
+  }
+  #slogan{
+   position: absolute;
+   bottom: 0;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s bottom 0.5s;
+   margin-left: 680px;
+   margin-bottom: -25px;
+   font-size: 30px;
+  }
+  #slogan.show{
+   opacity: 1;
+   bottom: 190px;
+   transform: translateX(-50%) translateY(-50%);
+  }
+  .first-line{
+   font-size: 40px;
+   margin-top: 170px;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+  @keyframes moveSide{
+   0%{
+     transform: translateX(0);
+   }
+   50%{
+     transform: translateX(85px);
+   }
+   100%{
+     transform: translateX(0);
+   }
+  }
+  #nav-links{
+   color: white;
+   text-decoration: none;
+   list-style: none; 
+   float: right;
+   font-size: 20px;
+   margin: 10px;
+  }
+  #nav-links:hover{
+   color: purple; 
+   text-decoration: solid #C4A484 underline;
+   transform: translateY(-7px);
+   transition: background-color 0.7s ease-in;
+  }
+  .footer{
+   background-color: rgba(0, 0, 0, 0.6);
+   overflow: hidden;
+   text-align: center;
+   padding: 20px;
+   color: white;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+  }	 
+  .hero-section{
+   background-image: url('hero.jpg');
+   height: 700px;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+  }
+  .back-to-top{
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: purple;
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 50px;
+   text-decoration: none;
+  }
+  .back-to-top:hover{
+   background-color: transparent;
+   transform: translateY(-7px);
+   transition: background-color 0.3s ease-in;
+  }
+  .letter{
+   margin: 55px;
+   width: 989px;
+   height: 999px;
+  }
+ </style>
+ 
+ <body id="home">
+  <header class="header" id="top">
+   <img src="logo.png" alt="image" class="logo">
+   <a href="service.html" id="nav-links">Services</a> 
+   <a href="about.html" id="nav-links">About</a>
+   <a href="index.html" id="nav-links">Home</a>
+  </header>
+  
+  <section class="hero-section">
+  <center><h1 class="first-line"><b><span style="color: green;">T</span>sogang 
+   <span style="color: purple;">S</span>echaba 
+   <span  style="color: green;">C</span>ommunity 
+   <span style="color: purple;">P</span>roject</b></h1>
+   <h3 id="slogan"><b><span style="color: purple;">T</span>ransformation and 
+   <span style="color: green;">S</span>ervice 
+   <span style="color: purple;">I</span>mplementation 
+   <span style="color: green;">P</span>lan
+  </section>
+  
+   <main class="main">
+    <center>
+	 <img src="confLetter.png" alt="image" class="letter">
+	</center>
+   </main>
+   
+   <br>
+   <footer class="footer">
+    <center><p>Copyright &copy; <u>Tsogang Sechaba Community Project</u> 2025. All Rights Reserved.</p>
+	<p>Developed by Thato Decent Thobakgale</p></center>
+	  <a href="#top" class="back-to-top">Top</a>
+   </footer>
+  <script src="script.js"></script>
+ </body>
+</html>

@@ -1,0 +1,343 @@
+<!Doctype html>
+<html>
+ <head>
+  <title>Tsogang Sechaba Community Project</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0, user-scalable=no">
+  
+		<!-- Icon links -->
+        <link href="title-logo.jpeg" rel="icon"><!-- Title Icon -->
+ </head>
+ 
+ <style>
+  html, body{ 
+   font-family: Arial, sans-serif;
+   background-color: BLACK;
+   color: black;
+   padding: 0;
+   margin: 0;
+   top: 0;
+   left: 0;
+  }
+  .header{
+   background-color: rgba(0, 0, 0, 0.6);
+   position: relative;
+   height: 120px;
+   overflow: hidden;
+   line-height: 100px
+  }
+  #slogan{
+   position: absolute;
+   bottom: 0;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s bottom 0.5s;
+   margin-left: 680px;
+   margin-bottom: -25px;
+   font-size: 30px;
+  }
+  #slogan.show{
+   opacity: 1;
+   bottom: 190px;
+   transform: translateX(-50%) translateY(-50%);
+  }
+  .first-line{
+   font-size: 40px;
+   margin-top: 170px;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+  @keyframes moveSide{
+   0%{
+     transform: translateX(0);
+   }
+   50%{
+     transform: translateX(85px);
+   }
+   100%{
+     transform: translateX(0);
+   }
+  }
+  #nav-links{
+   color: white;
+   text-decoration: none;
+   list-style: none; 
+   float: right;
+   font-size: 20px;
+   margin: 10px;
+  }
+  #nav-links:hover{
+   color: purple; 
+   text-decoration: solid #C4A484 underline;
+   transform: translateY(-7px);
+   transition: background-color 0.7s ease-in;
+  }
+  .footer{
+   background-color: rgba(0, 0, 0, 0.6);
+   overflow: hidden;
+   text-align: center;
+   padding: 20px;
+   color: white;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+  }	 
+  .hero-section{
+   background-image: url('hero.jpg');
+   height: 700px;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+  }
+  .back-to-top{
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: purple;
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 50px;
+   text-decoration: none;
+  }
+  .back-to-top:hover{
+   background-color: transparent;
+   transform: translateY(-7px);
+   transition: background-color 0.3s ease-in;
+  }
+  #first-heading{
+   position: absolute;
+   bottom: 0;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s bottom 0.5s;
+   margin-left: 680px;
+   margin-bottom: -25px;
+   font-size: 25px;
+  }
+  #first-heading.show{
+   opacity: 1;
+   bottom: 250px;
+   transform: translateX(-50%) translateY(-50%);
+  }
+  .first-paragraph{
+   max-width: 780px;
+   opacity: 0;
+   transition: opacity 2s;
+   color: white;
+   font-size: 20px;
+   text-shadow: 1px 1px 5px green; 
+  }
+  .first-paragraph.visible{
+   opacity: 1;
+  }
+  .second-paragraph{
+    max-width: 1150px;
+   color: white;
+   font-size: 20px; 
+  }
+  	.card{
+	color: purple;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left: 195px;
+	max-width: 950px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover { 
+    transform: translateY(-9px);  
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.9s ease-in;
+    box-shadow: 5px 5px 5px 5px rgb(255, 255, 255, 1);
+    border: 1px solid rgb(255, 255, 255, 1);
+}
+.first-heading{
+   font-size: 40px;
+   color: purple;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+   .h1, .first-heading{
+    color: purple;
+}
+	.curtains{
+	 position: relative;
+	 width: 900px;
+	 height: 580px;
+	 overflow: hidden; 
+	 margin: 0 auto;
+	}
+	.curtain{
+	 position: absolute;
+	 width: 50%;
+	 height: 100%;
+	 top: 0; 
+	 background-color: #fff;
+	 transform: translateX(0);
+	 transition: transform 1s;
+	 z-index: 1;
+	}
+	.left{
+	 left: 0;
+	}
+	.right{
+	 right: 0;
+	}
+	.slides{
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	}
+	.slide{
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 50%;
+	 height: 100%;
+	 opacity: 0;
+	 transition: opacity 0.1s;
+	}
+	.slide.active{
+	 opacity: 1;
+	}
+	.img{
+	 height: 560px;
+	 width: 100%;
+	 margin-left: 250px;
+	}
+ </style>
+ 
+ <body id="home">
+  <header class="header" id="top">
+   <img src="logo.png" alt="image" class="logo">
+   <a href="banking.html" id="nav-links">Donation</a> 
+   <a href="service.html" id="nav-links">Services</a> 
+   <a href="about.html" id="nav-links">About</a>
+   <a href="index.html" id="nav-links">Home</a>
+  </header>
+  
+  <section class="hero-section">
+  <center><h1 class="first-line"><b><span style="color: green;">T</span>sogang 
+   <span style="color: purple;">S</span>echaba 
+   <span  style="color: green;">C</span>ommunity 
+   <span style="color: purple;">P</span>roject</b></h1>
+   <h3 id="slogan"><b><span style="color: purple;">T</span>ransformation and 
+   <span style="color: green;">S</span>ervice 
+   <span style="color: purple;">I</span>mplementation 
+   <span style="color: green;">P</span>lan
+  </section>
+   
+   <main class="main" id="about">
+    <marquee><h1 style="color: green"><b><i>Welcome to Tsogang Sechaba Community Project</marquee></h1></b></i>
+	<center><h1 class="first-heading">
+   <span style="color: green;">E</span>UCATE 
+   <span style="color: green;">A</span> 
+   <span style="color: green;">C</span>HILD
+	<span style="color: green;">A</span>ND
+   <span style="color: green;">E</span>MPOWER 
+   <span style="color: green;">T</span>HE
+   <span style="color: green;">N</span>ATION</h1></center>
+	<br>
+	<center><h1 class="h1">Our Journey</h1></center>
+	<center><h4 class="first-paragraph"><b>Organizational Transformation and Consultant Appointment:</b> To enhance our ability to respond to community needs with effectiveness and sustainability, Tsogang Sechaba Community Project will implement a suitability and risk management transformation plan. This plan includes the appointment of a Consultant Fundraising Manager with expertise in community-centered programming and financial management. The consultant will focus on resource mobilization, organizational sustainability, and ensuring alignment with risk management protocols specific to HIV/AIDS prevention and psychosocial support services. Their role will be pivotal in navigating funding landscapes, securing partnerships, and maintaining transparent, efficient financial processes to support organizational goals.</h4>
+	
+	<h1 class="h1">What We Do</center>
+	 <div class="curtains">
+	 <div class="curtain left"></div>
+	 <div class="curtain right"></div>
+	  <div class="slides">
+	  <div class="slide">
+	   <img src="pic16.jpg" alt="image 1" class="img">
+	  </div>
+	  
+	  <div class="slide">
+	   <img src="pic18.jpg" alt="image 2" class="img">
+	  </div>
+	  
+	  <div class="slide">
+	   <img src="pic17.jpg" alt="image 3" class="img">
+	  </div>
+	  
+	  <div class="slide">
+	   <img src="pic19.jpg" alt="image 4" class="img">
+	  </div>
+	  
+	  <div class="slide">
+	   <img src="pic20.jpg" alt="image 4" class="img">
+	  </div>
+	  
+	  <div class="slide">
+	   <img src="pic21.jpg" alt="image 4" class="img">
+	  </div>
+	 </div>
+	</div>
+	 
+	 <section id="main">
+	 <center><h1 class="h1">Why Choose Us</h1>
+	     <h4 class="second-paragraph">AT Tsogang Sechaba Community Project, we believe that every individual deserves a chance to thrive. That's why we're dedicated to empower and support vulnerable communities affected by HIV, STDs, and gender-based violence through comprehensive psychosocial services, ensuring holistic well-being and fostering resilience among children, young adults, youth, and orphaned vulnerable children. We strive to provide accessible and sustainable care that promotes health, dignity, and social justice. By choosing to support us, you'll be contributing to a community-driven effort that prioritizes [Healthcare and Education]. Your trust and investment will help us create lasting impact, empower neglacted communities, and foster positive change.</h4> <b><center><h3>Together, let's make a difference and create a brighter future for all.</b></center></h3>
+	 </center>
+		 <br>
+		 <div class="card">
+		  <center><h2 class="h1">Pros</h2></center>
+		  <ol><h4>
+		   <li>Comprehensive Psychosocial Services</li>
+		   <ul>
+			<li>Emotional Support: Counselling and support groups will equip beneficiaries with coping skills and emotional resilience.</li>
+			<li>Tailored Programs: Customized programs will address the specific psychosocial needs of each group, offering specialized support.</li> 
+		   </ul>
+		   
+		   <li>HIV and STD Prevention and Care</li>
+		   <ul>
+			<li>Education and Awareness: Community members will receive targeted education on prevention, thereby reducing transmission rates.</li>
+			<li>Testing and Treatment Access: Increased service access will lead to improved health outcomes for individuals managing HIV and STDs.</li>
+		   </ul>
+		   
+		   <li>Gender-Based Violence (GBV) Intervention</li>
+		   <ul>
+			<li>Immediate Support Services: Survivors will receive urgent support, including counselling and legal assistance, enabling them to regain control.</li>
+			<li>Community Advocacy: Campaigns will promote respect and protection for all, reducing the prevalence of GBV.</li>
+		   </ul>
+		   
+		   <li>Nutritional Support</li>
+		   <ul>
+			<li>Balanced Nutrition: The nutritional support will boost the health of beneficiaries, particularly those affected by HIV and GBV.</li>
+			<li>Sustainable Programs: Collaborations with partners will secure a continuous supply of resources for ongoing nutritional initiatives.</li>
+		   </ul>
+		   
+		   <li>Caregiver Support and Training</li>
+		   <ul>
+			<li>Skill Development: Caregivers will receive targeted training, preparing them to support children effectively.</li>
+			<li>Emotional and Social Support: Support groups will offer caregivers a platform for sharing experiences and solutions to caregiving challenges.</li>
+		   </ul>
+		   
+		   <li>Health and Wellness Initiatives</li>
+		   <ul>
+			<li>Regular Screenings and Workshops: These will focus on the physical and mental health of older adults, empowering them to care for others effectively.</li>
+			<li>Nutritional Guidance: Beneficiaries will gain insights into healthy aging and diet to support sustained well-being.</li>
+		   </ul>
+		   
+		   <li>Victim Empowerment Programme</li>
+		   <ul>
+			<li>Holistic Support: Victims of crime and abuse will receive counselling, legal aid, and trauma support to facilitate recovery.</li>
+			<li>Restoration of Dignity: By fostering resilience, the program will empower victims to reclaim their lives and enhance their confidence.</li>
+		   </h4></ul>
+		  </ol>
+		 </div>
+    </main>
+   </main>
+   <br>
+   <footer class="footer">
+    <center><p>Copyright &copy; <u>Tsogang Sechaba Community Project</u> 2025. All Rights Reserved.</p>
+	<p>Developed by Thato Decent Thobakgale</p></center>
+	  <a href="#top" class="back-to-top">Top</a>
+   </footer>
+   <script src="script.js"></script>  
+ </body>

@@ -1,0 +1,395 @@
+<!Doctype html>
+<html>
+ <head>
+  <title>Tsogang Sechaba Community Project</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0, user-scalable=no">
+  
+		<!-- Icon links -->
+        <link href="title-logo.jpeg" rel="icon"><!-- Title Icon -->
+ </head>
+ 
+ <style>
+  html, body{ 
+   font-family: Arial, sans-serif;
+   color: #FF9900;
+   padding: 0;
+   margin: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+  }
+  .header{
+   background-color: rgba(0, 0, 0, 0.6);
+   position: relative;
+   height: 120px;
+   overflow: hidden;
+   line-height: 100px
+  }
+  #slogan{
+   position: absolute;
+   bottom: 0;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s bottom 0.5s;
+   margin-left: 680px;
+   margin-bottom: -25px;
+   font-size: 30px;
+   color: black;
+  }
+  #slogan.show{
+   opacity: 1;
+   bottom: 190px;
+   transform: translateX(-50%) translateY(-50%);
+  }
+  .h1{
+   color: black;
+   font-size: 40px;
+   margin-top: 170px;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+  @keyframes moveSide{
+   0%{
+     transform: translateX(0);
+   }
+   50%{
+     transform: translateX(85px);
+   }
+   100%{
+     transform: translateX(0);
+   }
+  }
+  #nav-links{
+   color: white;
+   text-decoration: none;
+   list-style: none; 
+   float: right;
+   font-size: 20px;
+   margin: 10px;
+  }
+  #nav-links:hover{
+   color: purple; 
+   text-decoration: solid #C4A484 underline;
+   transform: translateY(-7px);
+   transition: background-color 0.7s ease-in;
+  }
+  .footer{
+   background-color: rgba(0, 0, 0, 0.6);
+   overflow: hidden;
+   text-align: center;
+   padding: 20px;
+   color: white;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+  }	
+  
+  .hero-section{
+   background-image: url('hero.jpg');
+   height: 700px;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+  }
+  .availability{
+   max-width: 900px;
+   margin-left: 155px;
+  }
+  .img{
+   margin-left: 50px;
+   width: 300px;
+   height: 280px;
+   justify-content: space-between;
+  }
+  .card h3 {
+    color: #C4A484;
+    margin-bottom: 10px;
+}
+
+.card li {
+    margin-bottom: 15px;
+}
+	.card {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+	margin-left: 50px;
+	max-width: 550px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-21px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+	.row1, .row2, .row3{
+	   display: flex;
+	   gap: 25px;
+	}
+	button{
+	   margin-left: 60px;
+	   background-color: white;
+	   border: 2px solid gray;
+	   border-radius: 6px;
+	   height: 35px;
+	   width: 89px;
+	   font-size: 18px;
+	}
+	button:hover{
+	   background-color: #C4A484;
+	   border: 2px solid transparent;
+	   text-shadow: 5px 5px 5px white;
+	   transition: background-color 0.18s ease-in;
+	}
+	.row3{
+	 margin-left: 340px;
+	}
+	video{
+  position: fixed;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+ }
+ li{
+  font-size: 20px;
+ }
+  .back-to-top{
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: purple;
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 50px;
+   text-decoration: none;
+  }
+  .back-to-top:hover{
+   background-color: transparent;
+   transform: translateY(-7px);
+   transition: background-color 0.3s ease-in;
+  }
+ </style>
+ 
+ <body id="home">
+  <header class="header" id="top">
+   <img src="logo.png" alt="image" class="logo">
+   <a href="banking.html" id="nav-links">Donation</a> 
+   <a href="service.html" id="nav-links">Services</a> 
+   <a href="about.html" id="nav-links">About</a>
+   <a href="index.html" id="nav-links">Home</a>
+  </header>
+  
+  <video autoplay loop muted plays-inline>
+   <source src="back.mp4" type="video/mp4">
+  </video>
+  
+  <section class="hero-section">
+  <center><h1 class="h1"><b><span style="color: green;">T</span>sogang 
+   <span style="color: purple;">S</span>echaba 
+   <span  style="color: green;">C</span>ommunity 
+   <span style="color: purple;">P</span>roject</b></h1>
+   <h3 id="slogan"><b><span style="color: purple;">T</span>ransformation and 
+   <span style="color: green;">S</span>ervice 
+   <span style="color: purple;">I</span>mplementation 
+   <span style="color: green;">P</span>lan
+   </h3>
+  </section>
+   
+   <main class="main">
+    <div class="availability">
+     <center><h1 style="color: #8BC34A;" id="h1">Project Timing and Service Availability</h1></center>
+	 <center><h3>Services provided by the Tsogang Sechaba Community Project are designed to be accessible and available at key times to maximize impact:</h3>
+	 <ul><h4>
+	  <li>Counselling and Psychosocial Support -> Available weekly, Monday through Friday, during working hours (9 a.m. – 5 p.m.).</li>
+	  <li>GBV Intervention and Immediate Support -> Services will be available on-demand with a 24/7 emergency contact for urgent cases.</li>
+	  <li>HIV and STD Testing and Treatment -> These services will be scheduled weekly in collaboration with local health providers to ensure regular access.</li>
+	  <li>Nutritional Support Programs -> Provided daily during weekdays, ensuring that children and vulnerable adults receive meals consistently.</li>
+	  <li>Caregiver Training and Support Groups -> Monthly sessions will be held, with quarterly workshops for advanced skill-building.</li>
+	  <li>Health and Wellness Screenings -> Regular quarterly screenings will be scheduled, with monthly workshops on health and wellness topics.</li>
+	  </h4>
+	 </ul>
+	 <h3>This comprehensive approach is aimed at building a resilient, healthier community where each individual has access to support for long-term growth and recovery.</h3>
+	 </center>
+	 <br>
+	 <center><h1 style="color: #8BC34A;" id="h1">Value to the Department in 2025/2026.</h1></center>
+	 <center><h3>In the next financial year, Tsogang Sechaba Community Project will contribute significant value to the Department:</h3></center>
+	 <ol>
+	  <li>Enhanced Community Health Outcomes:</li>
+	 <ul>
+	  <li>Increased access to HIV prevention, care, and education will reduce infection rates and improve public health metrics.</li>
+	 </ul>
+	  <li>Reduction in Gender-Based Violence:</li>
+	  <ul>
+	   <li>Community awareness campaigns and survivor support services will create safer, more inclusive communities.</li>
+	  </ul>
+	  <li>Support for Vulnerable Populations:</li>
+	  <ul>
+	   <li>Provision of psychosocial, nutritional, and empowerment services will foster resilience among children, youth, and caregivers.</li>
+	  </ul>
+	  <li>Strengthened Community Networks:</li>
+	  <ul>
+	   <li>Collaboration with local stakeholders will build sustainable networks to address systemic issues like poverty, crime, and substance abuse.</li>
+	  </ul>
+	 </ol>
+	 
+	 <center><h1 style="color: #8BC34A;" id="h1">Service Provision Overview</h1>
+	  <h2 style="color: #8BC34A;" id="h1">Target Populations:</h2></center>
+	</div>
+	
+	 <div class="row1">
+	  <div class="card">
+	    <center><h3>Children and Youth</h3>
+	     <li>Orphaned Vulnerable Children: Serving those who have lost parents to HIV/AIDS or violence.</li>
+		 <li>Young Adults and Youth (Ages 15-24): Focusing on those at risk for HIV, gender-based violence (GBV), and other social challenges.</li>
+	    
+	   <article class="slide" id="slid1">
+	    <img src="pic.jpeg" alt="slide 1" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slid2" style="display: none;">
+	    <img src="pic2.jpeg" alt="slide 2" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slid3" style="display: none;">
+	    <img src="pic9.jpeg" alt="slide 3" class="img">
+	   </article>
+	   <br>
+	   <button onclick="next()">Next</button></center>
+	  </div>
+	   
+	  <div class="card">
+	   <center><h3>Survivors of Gender-Based Violence (GBV)</h3>
+		 <li>Providing tailored support services for both women and men affected by GBV.</li>
+       
+	   <article class="slide" id="slide1">
+	    <img src="pic3.jpeg" alt="slide 1" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slide2" style="display: none;">
+	    <img src="pic4.jpeg" alt="slide 2" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slide3" style="display: none;">
+	    <img src="pic5.jpeg" alt="slide 3" class="img">
+	   </article>
+	   <br>
+	   <button onclick="next2()">Next</button></center>
+	   </div>
+	  </div>
+	   
+	  <div class="row2">
+	   <div class="card">
+	   <center><h3>Individuals Living with HIV and STDs</h3>
+		<li>Serving people diagnosed with HIV or STDs who require access to care, treatment, and support services.</li>
+	   
+	   <article class="slide" id="slidee1">
+	    <img src="pic6.jpeg" alt="slidee 1" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slidee2" style="display: none;">
+	    <img src="pic7.jpeg" alt="slidee 2" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slidee3" style="display: none;">
+	    <img src="pic8.jpeg" alt="slidee 4" class="img">
+	   </article>
+	   <br>
+	   <button onclick="next3()">Next</button></center>
+	   </div>
+	   
+	   <div class="card">
+	   <center><h3>Caregivers</h3>
+		<li>Primarily older adults acting as caregivers to children impacted by HIV, GBV, or substance abuse.</li>
+	   
+	   <article class="slide" id="slideee1">
+	    <img src="pic10.jpeg" alt="slideee 1" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slideee2" style="display: none;">
+	    <img src="pic11.jpeg" alt="slideee 2" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slideee3" style="display: none;">
+	    <img src="pic12.jpeg" alt="slideee 3" class="img">
+	   </article>
+	   <br>
+	   <button onclick="next4()">Next</button></center>
+	   </div>
+	  </div>
+	   
+	  <div class="row3">
+	   <div class="card">
+	   <center><h3>Community Members</h3>
+	    <li>Broader outreach includes community members seeking health, wellness, education, and nutritional support.</li>
+	   
+	   <article class="slide" id="slideeee1">
+	    <img src="pic13.jpeg" alt="slideeee 1" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slideeee2" style="display: none;">
+	    <img src="pic14.jpeg" alt="slideeee 2" class="img">
+	   </article>
+	   
+	   <article class="slide" id="slideeee3" style="display: none;">
+	    <img src="pic15.jpeg" alt="slideeee 3" class="img">
+	   </article>
+	   <br>
+	   <button onclick="next5()">Next</button></center>
+	   </div>
+	 </div> 
+	
+    <div class="availability">
+	 <center><h1 style="color: #8BC34A;" id="h1">Sustainability Plan</h1></center>
+	 <h2>To ensure the long-term viability of services:</h2>
+	 <ol>
+	  <li>Financial Sustainability:</li>
+	  <ul>
+	   <li>Establish a multi-year funding strategy with diverse income streams, including grants, donor contributions, and corporate sponsorships.</li>
+	   <li>Allocate 15% of all funding to administrative costs to maintain operational efficiency.</li>
+	  </ul>
+	  
+	  <li>Capacity Building:</li>
+	  <ul>
+	   <li>Continuous training for staff, social workers, and caregivers to enhance their effectiveness and adaptability.</li>
+	   <li>Recruitment of additional professionals and volunteers to meet growing demand.</li>
+	  </ul>
+	  
+	  <li>Community Partnerships:</li>
+	  <ul>
+	   <li>Strengthen collaborations with government departments, SAPS, and local NGOs to share resources and expertise.</li>
+	   <li>Engage community leaders in program planning and implementation to ensure local relevance and support.</li>
+	  </ul>
+	  
+	  <li>Monitoring and Evaluation:</li>
+      <ul>
+	   <li>Implement robust systems to track program outcomes and improve service delivery.</li>
+	   <li>Use data-driven insights to adjust strategies and align with community needs.</li>
+      </ul>
+	  
+	  <li>Technology Integration:</li>
+	  <ul>
+	   <li>Expand the use of digital platforms for education, counseling, and support to reach more beneficiaries efficiently.</li>
+	   <li>Develop an online donation platform to attract international funding.</li>
+	  </ul>
+	  <h3>By focusing on these strategic goals, Tsogang Sechaba Community Project will continue to serve as a critical partner to the Department, fostering healthier, safer, and more resilient communities in 2025/2026 and beyond.</h3>
+	 </ol>
+	</div>
+   </main>
+   <footer class="footer">
+    <center><p>Copyright &copy; <u>Tsogang Sechaba Community Project</u> 2025. All Rights Reserved.</p>
+	<p>Developed by Thato Decent Thobakgale</p></center>
+	  <a href="#top" class="back-to-top">Top</a>
+   </footer>
+   <script src="script.js"></script>  
+ </body>

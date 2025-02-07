@@ -1,0 +1,427 @@
+<!Doctype html>
+<html>
+ <head>
+  <title>Tsogang Sechaba Community Project</title>
+  <link href="styles.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0, user-scalable=no">
+  
+		<!-- Icon links -->
+        <link href="title-logo.jpeg" rel="icon"><!-- Title Icon -->
+ </head>
+ 
+ <style>
+  html, body{
+   font-family: Arial, sans-serif;
+   background-color: white;
+   color: black;
+   padding: 0;
+   margin: 0;
+   top: 0;
+   left: 0; 
+  }
+  .header{
+   background-color: rgba(0, 0, 0, 0.9);
+   width: 100%;
+   height: 120px;
+   overflow: hidden;
+   line-height: 100px
+  }
+  #slogan{
+   position: absolute;
+   bottom: 0;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: opacity 0.5s bottom 0.5s;
+   margin-left: 680px;
+   margin-bottom: -25px;
+   font-size: 30px;
+  }
+  #slogan.show{
+   opacity: 1;
+   bottom: 190px;
+   transform: translateX(-50%) translateY(-50%);
+  }
+  .h1{
+   font-size: 40px;
+   margin-top: 170px;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+  @keyframes moveSide{
+   0%{
+     transform: translateX(0);
+   }
+   50%{
+     transform: translateX(85px);
+   }
+   100%{
+     transform: translateX(0);
+   }
+  }
+  #nav-links{
+   color: white;
+   text-decoration: none;
+   list-style: none; 
+   float: right;
+   font-size: 20px;
+   margin: 10px;
+  }
+  #nav-links:hover{
+   color: purple; 
+   text-decoration: solid #C4A484 underline;
+   transform: translateY(-7px);
+   transition: background-color 0.7s ease-in;
+  }
+  .footer{
+   background-color: rgba(0, 0, 0, 0.6);
+   overflow: hidden;
+   text-align: center;
+   padding: 20px;
+   color: white;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+  }
+  .paragraphs{
+   max-width: 50%;
+  }
+  
+  .container{
+	padding: 40px;
+    background-color: purple;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	margin: 20px auto;
+	max-width: 1100px;
+  }
+  .card{
+    background-color: violet;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	margin: 15px;
+	padding: 20px;
+	width: 300px;
+	transition: transform 0.3s;
+    transform: scale(1.05);
+}
+  #card{
+	border-radius: 10px;
+	margin-left: 80px;
+	margin-right: 40px;
+	max-width: 900px;
+	padding: 10px;
+	transition: transform 0.3s; 
+  }
+  #card:hover{
+   background-color: violet;
+   color: white;
+   box-shadow: 5px 5px 5px violet;
+   transform: trnslateY(-9px) ease-in; 
+   transition: background-color 0.9s ease-in; 
+   border: 1px solid violet;
+   }
+  .row1, .row2, .row3{
+   display: flex;
+   margin: 9px;
+   gap: 24px;
+  }
+  ol, .ChatGPT{
+   font-size: 20px;
+   margin: 30px;
+  }
+  .ol{
+   max-width: 500px;
+  }
+  .h3{
+   margin: 20px;
+  }
+  #row1{
+   display: flex;
+   gap: 50px;
+  }
+  #h1{
+   font-size: 30px;
+  }
+  .first-heading{
+   font-size: 40px;
+   color: purple;
+   position: relative; 
+   animation: moveSide 5s infinite linear;
+  }
+  .hero-section{
+   background-image: url('hero.jpg');
+   height: 700px;
+   width: 100%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   overflow: hidden;
+  }
+  .founder-img{
+   width: 300px;
+   height: 300px;
+   margin: 25px;
+  }
+  .footerInfo{
+   display: flex;
+   margin: 39px;
+   padding: 10px;
+   gap: 385px;
+  }
+  .back-to-top{
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+   background-color: purple;
+   color: #fff;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 50px;
+   text-decoration: none;
+  }
+  .back-to-top:hover{
+   background-color: transparent;
+   transform: translateY(-7px);
+   transition: background-color 0.3s ease-in;
+  }
+  #media-links{
+   margin-top: 15px;
+   font-size: 30px;
+  }
+ </style>
+ 
+ <body id="home">
+  <header class="header" id="top">
+   <img src="logo.png" alt="image" class="logo">
+   <a href="banking.html" id="nav-links">Donation</a> 
+   <a href="service.html" id="nav-links">Services</a>
+   <a href="#contact" id="nav-links">Contact</a>
+   <a href="#about" id="nav-links">About</a>
+   <a href="index.html" id="nav-links">Home</a>
+  </header>
+  
+  <section class="hero-section">
+  <center><h1 class="h1"><b><span style="color: green;">T</span>sogang 
+   <span style="color: purple;">S</span>echaba 
+   <span  style="color: green;">C</span>ommunity 
+   <span style="color: purple;">P</span>roject</b></h1>
+   <h3 id="slogan"><b><span style="color: purple;">T</span>ransformation and 
+   <span style="color: green;">S</span>ervice 
+   <span style="color: purple;">I</span>mplementation 
+   <span style="color: green;">P</span>lan
+  </section>
+   
+   <main class="main" id="about">
+    <marquee><h1 style="color: green"><b><i>Welcome to Tsogang Sechaba Community Project</marquee></h1></b></i>
+	<center><h1 class="first-heading">
+   <span style="color: green;">E</span>UCATE 
+   <span style="color: green;">A</span> 
+   <span style="color: green;">C</span>HILD
+	<span style="color: green;">A</span>ND
+   <span style="color: green;">E</span>MPOWER 
+   <span style="color: green;">T</span>HE
+   <span style="color: green;">N</span>ATION</h1></center>
+	<div class="row3">
+	<div class="caard">
+	  <center><h2 >Meet The Founder Of TSCP</h2>
+	   <img src="funder.jpg" alt="img" class="founder-img">
+	  <h3 class="funder-img">Tony Gloria Bodibe</h3></center>
+	 </div>
+	 
+	<div class="caard">
+	   <center><h1 style="color: #8BC34A;" id="h1">Project origin</h1>
+	<center><p class="paragraphs">Tsogang Sechaba, meaning "WAKE UP AFRICA", was founded in 1999 by Tony Gloria Bodibe. The organization officially registered with Department of Social Development (DSD) on 16 October 2002, enabling access to funding, resources, and partnership. Since then, Tsogang Sechaba Community Project has continued to grow, responding to community needs and escalating its commitment to providing comprehensive support services.</p></center>
+	</div>
+   </div>
+   
+	<center><h1 style="color: #8BC34A;" id="h1">Our Story</h1>
+	 <p class="paragraphs">The Tsogang Sechaba Community Project is a dedicated organization committed to 
+	 empowering vulnerable communities affected by HIV, STDs, and gender-based violence. 
+	 Through a supportive network and comprehensive psychosocial services, we aim to foster 
+	 resilience, ensure holistic well-being, and promote social justice among children, young 
+	 adults, youth, and orphaned vulnerable children. Our mission is grounded in the belief that 
+	 every individual deserves accessible and sustainable care to lead a dignified life. We strive to 
+	 create a society where everyone has the support they need  to thrive, free from the impacts of 
+	  these social challenges.</p>
+	 <br>
+	 <h1 style="color: #8BC34A;" id="h1">Mission and Vision</h1>
+	  <h2 style="color: green;" id="h1">Our mission</h2>
+	   <p class="paragraphs">Our mission is to empower and   support vulnerable communities affected by HIV, STDs, and gender-based 
+       violence through comprehensive psychosocial services, ensuring holistic well-being and 
+	   fostering resilience among children, young adults, youth, and orphaned vulnerable children. 
+	   We strive to provide accessible and sustainable care that promotes health, dignity, and social 
+	   justice.</p>
+	  
+	  <h2  style="color: green;" id="h1">Our vision</h2>
+	   <p class="paragraphs">A society where every individual, regardless of their circumstances, can access the support 
+	   they need to live healthy, empowered lives free from the impacts of HIV, STDs, and gender-based violence.</p></center>
+	   	
+	 <section class="container"> 
+	  <center><h1 style="color: #8BC34A;" id="h1">Objectives</h1></center>
+        <div class="row1">
+         <div class="card">
+          <center><h2>HIV and STD Prevention and Care:</h2></center>
+		   <li>Provide education and awareness on HIV and STD prevention.</li>
+		   <li>Facilitate access to testing, treatment, and ongoing care for individuals living with HIV and STDs.</li>
+		   <li>Offer nutritional support to improve the health outcomes of affected individuals.</li>
+		  </div>
+        
+        <div class="card">
+          <center><h2>Gender-Based Violence (GBV) Intervention:</h2></center>
+		   <li> Deliver immediate support and counseling services to survivors of gender-based violence.</li>
+		   <li>Collaborate with the South African Police Service (SAPS) to provide intervention and for cases of substance abuse and GBV.</li>
+		   <li>Promote community awareness and advocacy to reduce the prevalence of GBV.</li>
+          </div>
+			
+            <div class="card">
+             <center><h2>Psychosocial Support for Vulnerable Population:</h2></center>
+		      <li>Offer counseling and emotional support through qualified social workers and social auxiliary workers.</li>
+		      <li>Provide psychosocial support tailored to the needs of children, young adults, youth, and orphaned vulnerable children affected by HIV/GBV.</li>
+		      <li>Conduct home visits by trained caregivers to assess and respond to the needs of household beneficiaries in hostels, informal settlements, and townships.</li>
+            </div>
+           </div>
+
+		   <div class="row2">
+			<div class="card">
+             <center><h2>Nutritional Support:</h2></center>
+		      <li>Ensure the provision of balanced and adequate nutrition to improve the overall wellbeing of those affected by HIV and GBV.</li>
+		      <li>Work with local and national partners to secure resources for sustainable nutritional programs.</li>
+            </div>
+
+			<div class="card">
+             <center><h2>Collaboration and Partnerships:</h2></center>
+		      <li>Strengthen partnerships with SAPS, healthcare providers, and other NGOs to ensure a coordinated response to HIV, STDs, GBV, and other related challenges.</li>
+		      <li>Facilitate referrals and linkages to ensure that beneficiaries receive comprehensive care and support</li>
+            </div>
+
+			<div class="card">
+             <center><h2>Caregiver Support and Training:</h2></center>
+		      <li>Provide specialized training and ongoing support for older persons who serve as caregivers for children living with HIV, orphaned due to HIV, or affected by GBV and substance abuse.</li>
+		      <li>Equip caregivers with the skills needed to manage the health and emotional wellbeing of these children, ensuring they can offer effective guidance and care.</li>
+            </div> 
+           </div> 
+
+			<div class="row3">
+			 <div class="card">
+              <center><h2>Health and Wellness Initiatives:</h2></center>
+		       <li>Organize regular health screenings, exercise sessions, and wellness workshops tailored to older persons.</li>
+		       <li>Promote healthy aging through nutritional guidance and activities that maintain physical and mental health, enabling caregivers to remain active and capable.</li>
+            </div>
+			
+			  <div class="card">
+               <center><h2>Social and Emotional Support Groups:</h2></center>
+		        <li>Facilitate support groups where older persons can share experiences, receive emotional support, and learn from each other.</li>
+		        <li>Address the challenges of caregiving and provide a platform for discussing strategies to handle the unique needs of children affected by HIV, GBV, and substance abuse.</li>
+            </div> 		
+			 
+			  <div class="card">
+               <center><h2>Victim Empowerment Programme:</h2></center>
+		        <li>Provide holistic support to individuals affected by crime, abuse, and violence.</li>
+		        <li>Empower victims through counseling, legal assistance, and trauma interventions to regain control of their lives.</li>
+		        <li>Foster resilience and recovery by offering safe spaces, psychosocial support, and access to critical resources.</li>
+		        <li>Collaborate with law enforcement and community organizations to ensure comprehensive care and protection.</li>
+		        <li>Restore dignity and facilitate healing for all victims through dedicated support services.</li>
+          </div> 					
+        </div>
+	   </section>
+	   
+	    <p></p>
+	   </center>
+	   <center><h1 style="color: #8BC34A;" id="h1">Achievements and Challenges met</h1></center>
+		  <center><h3>You said:</h3></center>
+		  <ol>
+		   <li>What did the organization achieve in the current year 2024/2025? -> The challenges met by the organization and the plans to mitigate them.</li>
+		   <li>What value will the organization bring to the Department in the 2025/2026 financial year as per their objectives in the business plan? -> Sustainability plan that will ensure that services that are required are not hampered.</li> 
+		  </ol>
+		  
+		  <center><h3>ChatGPT said:</h3></center>
+		  <p class="ChatGPT">In the current year, Tsogang Sechaba Community Project successfully implemented and expanded its programs to address critical community needs:</p>
+		 
+		 <div id="row1">
+		  <div id="card">
+		  <center><h2>Milestones</h2></center>
+		  <ol class="ol">
+		  <h4 class="h3">HIV/AIDS Prevention and Care:</h4>
+		   <li>Reached over 2,500 beneficiaries with HIV education, testing, and treatment services.</li>
+		   <li>Increased awareness of HIV prevention methods through community campaigns and workshops, reducing stigma and improving testing rates.</li> 
+		   
+		   <h4 class="h3">Gender-Based Violence (GBV) Intervention:</h4>
+		   <li>Provided psychosocial support and counseling to over 300 GBV survivors, empowering them to rebuild their lives.</li>
+		   <li>Trained 50 community advocates to lead GBV awareness and prevention initiatives.</li>
+		   
+		   <h4 class="h3">Nutritional Support:</h4> 
+		   <li>Delivered 10,000 balanced meals to vulnerable children and adults.</li>
+		   <li>Partnered with local suppliers to establish sustainable food delivery channels for ongoing nutritional programs.</li>
+		   
+		   <h4 class="h3">Caregiver Training and Support:</h4>
+		   <li>Trained 75 caregivers in psychosocial skills and caregiving techniques, enhancing the quality of care for vulnerable populations.</li>
+		   <li>Established monthly caregiver support groups to provide a platform for shared learning and emotional resilience.</li>
+		   
+		   <h4 class="h3">Victim Empowerment Services:</h4>
+		   <li>Assisted over 200 victims of crime and abuse through trauma counseling and legal aid support.</li>
+		   <li>Introduced a referral system with SAPS to streamline victim support.</li>
+		  </ol>
+		 </div>
+		 
+		 <div id="card">
+		  <center><h2>Obstacles</h2></center>
+		  <ol class="ol">
+		   <li><h4 class="h3">Challenge: Limited Funding</h4></li>
+		   <p>Difficulty in meeting the financial demands of expanding services and covering operational costs.</p>
+		    <h4 class="h3">Mitigation Plan:</h4>
+		   <ul>
+		    <li>Appointment of a Consultant Fundraising Manager to secure grants, partnerships, and donor funding.</li>
+			<li>Diversifying revenue streams through partnerships with corporate sponsors and government initiatives.</li>
+		   </ul>
+		   
+		   <li><h4 class="h3">Challenge: High Demand for Services</h4></li>
+		   <p>Increased demand for psychosocial support, testing, and GBV intervention exceeded the organization’s capacity.</p>
+		    <h4 class="h3">Mitigation Plan:</h4>
+			<ul>
+			 <li>Recruitment of additional qualified social workers and volunteers.</li>
+			 <li>Streamlining service delivery through digital tools and case management systems to handle higher caseloads.</li>
+			</ul>
+			
+			<li><h4 class="h3">Challenge: Limited Access to Remote Areas</h4></li>
+		   <p>Challenges in reaching beneficiaries in rural and informal settlements.</p>
+		   <h4 class="h3">Mitigation Plan:</h4>
+		   <ul>
+		    <li>Expanding mobile service units to deliver support directly to hard-to-reach areas.</li>
+			<li>Partnering with local community leaders to coordinate outreach efforts.</li> 
+		   </ul>
+		  </ol>
+		 </div>
+		</div>
+   </main>
+   <br>
+   <footer class="footer" id="contact">
+    <h1>Contact us on: </h1>
+	 <div class="footerInfo">			
+      <div>
+	   <a><i class='bx bxl-gmail' id="media-links"></i></a><br>  
+	   <a><i class='bx bx-phone-call' id="media-links"></i></a><br>  
+	   <a><i class='bx bxl-whatsapp' id="media-links"></i></a><br>  
+	  </div>
+	
+	  <div>
+	   <h4>info@tsogangsechaba.org</h4>
+	   <h4>073 940 6391 / 067 743 0065</h4>
+       <h4>067 020 9367 / 073 940 6391</h4>
+	  </div>
+				
+	  <div id="location">
+	   <h2>Locate Us At:</h2> 
+	   <p style="margin-left: 90px;">254 Mookana street</p>
+	   <p style="margin-left: 90px;">Tshiawelo ext. 3</p> 
+	   <p style="margin-left: 90px;">1818</p>
+	  </div>
+	  <a href="#top" class="back-to-top">Top</a>
+	 </div>
+    <center><p>Copyright &copy; <u>Tsogang Sechaba Community Project</u> 2025. All Rights Reserved.</p>
+	<p>Developed by Thato Decent Thobakgale</p></center>
+   </footer>
+   <script src="script.js"></script>  
+ </body>
